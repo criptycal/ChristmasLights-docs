@@ -38,9 +38,9 @@
       <a href="#runtime">Blueprint controls</a>
       <a href="#performance">Optimization</a>
       <a href="#troubleshooting">Troubleshooting</a>
-      <a href="#compatibility">Compatibility &amp; scope</a>
+      <a href="#compatibility">Compatibility &amp; help</a>
     </nav>
-    <div class="sidebar-foot"><span class="status-dot"></span> Current development build<br><span>Verified target: UE 5.8.3 · Win64</span></div>
+    <div class="sidebar-foot"><span class="status-dot"></span> Christmas Lights user guide<br><span>Installation · Setup · Reference</span></div>
   </aside>
   <main id="main" tabindex="-1">
     <p id="no-results" class="no-results" hidden>No matching sections. Try “spacing”, “preview”, or “save”. <button id="clear-search" type="button">Clear search</button></p>
@@ -51,12 +51,12 @@
       <div class="hero-actions"><a class="button primary" href="#installation">Install from Fab <span aria-hidden="true">→</span></a><a class="button secondary" href="#spacing">Adjust light spacing</a></div>
       <div class="string-art" aria-hidden="true"><svg viewBox="0 0 720 175" fill="none"><path d="M-15 11C170 123 530 123 735 11" stroke="#617c6b" stroke-width="4"/><g stroke="#617c6b" stroke-width="4"><path d="M80 54V72M220 86V104M360 96V114M500 86V104M640 54V72"/></g><g><path d="M70 72h20v9H70z" fill="#617c6b"/><ellipse cx="80" cy="95" rx="13" ry="18" fill="#bf5849"/><path d="M210 104h20v8h-20z" fill="#617c6b"/><ellipse cx="220" cy="127" rx="13" ry="18" fill="#c4923d"/><path d="M350 114h20v8h-20z" fill="#617c6b"/><ellipse cx="360" cy="137" rx="13" ry="18" fill="#467c67"/><path d="M490 104h20v8h-20z" fill="#617c6b"/><ellipse cx="500" cy="127" rx="13" ry="18" fill="#c4923d"/><path d="M630 72h20v9h-20z" fill="#617c6b"/><ellipse cx="640" cy="95" rx="13" ry="18" fill="#bf5849"/></g></svg></div>
       <div class="feature-row"><div><strong>2 bulb families</strong><span>Classic LED &amp; faceted C9</span></div><div><strong>8 lighting patterns</strong><span>Steady, waves, chase &amp; more</span></div><div><strong>Reusable cord bakes</strong><span>Edit, build, save, repeat</span></div></div>
-      <div class="note"><strong>Looking for wider spacing?</strong> Select the actor, open <b>Optimization → Light Spacing Preset</b>, and choose <b>Wide (50 cm)</b>. New LED actors currently start with Automatic spacing.</div>
+      <div class="note"><strong>Looking for wider spacing?</strong> Select the actor, open <b>Optimization → Light Spacing Preset</b>, and choose <b>Wide (50 cm)</b>. New LED actors start with Automatic spacing.</div>
     </section>
 
     <section id="installation" data-section>
       <div class="section-kicker">01 / FROM FAB TO YOUR LEVEL</div><h2>Install from Fab</h2>
-      <p>Christmas Lights is planned for distribution as a paid Unreal Engine plugin on Fab. This walkthrough explains the buyer setup once the listing is available. Check the listing for the supported engine versions and platforms before purchasing.</p>
+      <p>Follow these steps to install Christmas Lights from your Fab library, enable it in your project, and place your first light string.</p>
       <ol class="steps">
         <li><div><h3>Purchase with your Epic account</h3><p>Sign in to Fab, open the Christmas Lights listing, select the applicable license, and complete checkout. Use the same Epic account in the Epic Games Launcher. Your purchase appears in your Fab library.</p></div></li>
         <li><div><h3>Install for your engine version</h3><p>Save and close Unreal Editor. In the Launcher, open <b>Unreal Engine → Library → Fab Library</b>, find Christmas Lights, and select <b>Install to Engine</b>. Choose the compatible engine version used by your project and wait for installation to finish.</p></div></li>
@@ -67,7 +67,7 @@
       <p class="muted">Epic’s instructions: <a href="https://dev.epicgames.com/documentation/en-us/fab/purchasing-and-downloading-assets-in-fab">purchasing on Fab</a>, <a href="https://dev.epicgames.com/documentation/unreal-engine/install-unreal-engine">installing plugins for an engine version</a>, and <a href="https://dev.epicgames.com/documentation/unreal-engine/working-with-plugins-in-unreal-engine">enabling plugins and displaying their content</a>.</p>
       <h3>Where are the files?</h3>
       <p>An engine installation stores the plugin beneath <code>&lt;UE installation&gt;/Engine/Plugins/</code>. Its assets are inside the <code>ChristmasLights/Content</code> folder; the Launcher may place the plugin in an intermediate folder such as <code>Marketplace</code>. The Content Browser shows a virtual plugin folder, so its labels can differ from the disk path.</p>
-      <div class="note"><strong>No manual asset import is needed.</strong> Use the plugin’s Blueprint directly from the Content Browser. Fab’s plugin action is <b>Install to Engine</b>; <b>Add to Project</b> is used for other product types. You do not need access to the developer’s private GitHub repository. See <a href="https://dev.epicgames.com/documentation/fab/exporting-assets-from-fab-in-launcher">Epic’s guide to Fab product actions</a>.</div>
+      <div class="note"><strong>No manual asset import is needed.</strong> Use the plugin’s Blueprint directly from the Content Browser. Fab’s plugin action is <b>Install to Engine</b>; <b>Add to Project</b> is used for other product types. See <a href="https://dev.epicgames.com/documentation/fab/exporting-assets-from-fab-in-launcher">Epic’s guide to Fab product actions</a>.</div>
       <h3>Using another project or engine version</h3>
       <p>Enable Christmas Lights separately in each project that needs it. For a different installed engine version, install its compatible plugin build through the Launcher first. The version picker only offers supported, installed versions; check <b>Installed Plugins</b> under the engine tile if that version already has it.</p>
       <h3>Keep your custom work in your project</h3>
@@ -90,7 +90,7 @@
       <div class="section-kicker">03 / THE PARTS</div><h2>Bulbs and cord styles</h2>
       <p>Bulb family, bulb appearance, cord construction, and spacing are separate controls.</p>
       <div class="cards two"><article><span class="card-tag">BULB FAMILY</span><h3>Classic LED</h3><p>The original compact bulb and socket. Supports Classic and Detailed appearance, with the same patterns and color controls.</p></article><article><span class="card-tag">BULB FAMILY</span><h3>C9</h3><p>A faceted bulb with its matching socket. Selecting C9 applies Large size, Wired cord, Wide spacing, Classic appearance, and Strong glow.</p></article></div>
-      <div class="table-wrap"><table><caption>Cord options</caption><thead><tr><th scope="col">Cord Preset</th><th scope="col">What it controls</th></tr></thead><tbody><tr><th scope="row">Classic</th><td>The original cable construction, with its own light-spacing value.</td></tr><tr><th scope="row">Wired</th><td>Twisted cord sections and a junction at each light. Uses Detailed Light Spacing. This is the native default cord.</td></tr></tbody></table></div>
+      <div class="table-wrap"><table><caption>Cord options</caption><thead><tr><th scope="col">Cord Preset</th><th scope="col">What it controls</th></tr></thead><tbody><tr><th scope="row">Classic</th><td>The original cable construction, with its own light-spacing value.</td></tr><tr><th scope="row">Wired</th><td>Twisted cord sections and a junction at each light. Uses Detailed Light Spacing. Wired is the default cord style.</td></tr></tbody></table></div>
       <p><b>Size Preset</b> changes physical bulb/socket size and cord thickness. It does not replace the spacing control. Selecting either family applies Classic appearance and Strong glow; subsequent manual settings remain editable.</p>
       <p class="muted">Changing C9 between Classic and Detailed appearance also reapplies its geometry shortcuts. Set custom size, cord, and spacing after choosing the family and appearance.</p>
     </section>
@@ -100,7 +100,7 @@
       <p>Find <b>Light Spacing Preset</b> under the actor’s <b>Optimization</b> category. A preset fills both the Classic and Wired numeric spacing fields.</p>
       <div class="spacing-options" aria-label="Spacing preset values"><div><strong>15<span>cm</span></strong><span>Close</span></div><div><strong>25<span>cm</span></strong><span>Standard</span></div><div class="recommended"><span class="small-label">MORE OPEN</span><strong>50<span>cm</span></strong><span>Wide</span></div><div><strong>100<span>cm</span></strong><span>Extra Wide</span></div></div>
       <div class="table-wrap"><table><caption>Automatic and manual spacing</caption><thead><tr><th scope="col">Setting</th><th scope="col">Behavior</th></tr></thead><tbody><tr><th scope="row">Automatic</th><td>Classic uses 15 cm. Wired uses the source cord’s native length (numeric value 0). This can place bulbs much closer together than Wide.</td></tr><tr><th scope="row">Custom</th><td>Keeps your numeric values. Editing a spacing number selects Custom. Normal construction and loading preserve those adjustments.</td></tr><tr><th scope="row">Wired fitting</th><td>Sections fit evenly along the spline, so actual distances can differ slightly from the requested spacing. The first bulb is approximately half a section from the start.</td></tr></tbody></table></div>
-      <div class="note"><strong>Current defaults</strong> Fresh actors start at Automatic. Selecting C9 applies Wide (50 cm). To use Wide for LED, select it explicitly. The default has not been changed to 50 cm for both families.</div>
+      <div class="note"><strong>Choose your spacing</strong> New actors start with Automatic. Selecting C9 applies Wide (50 cm). For LED strings with the same spacing, choose Wide after selecting the family.</div>
       <p>After changing spacing, let Real Time Geometry rebuild the preview or click <b>Build Lights</b>. Larger bulbs and tight curves may need more space to avoid overlap.</p>
     </section>
 
@@ -108,8 +108,8 @@
       <div class="section-kicker">05 / EDIT → BUILD → SAVE</div><h2>Editing and baking</h2>
       <p>Editable splines are the source of the string’s shape. A cord bake combines finished cord geometry into a reusable mesh, while bulbs and sockets remain instanced and animated.</p>
       <div class="workflow" aria-label="Geometry workflow"><div><span>1</span><b>Edit spline</b><small>Shape your path</small></div><span aria-hidden="true">→</span><div><span>2</span><b>Build Lights</b><small>Complete the geometry</small></div><span aria-hidden="true">→</span><div><span>3</span><b>Save level</b><small>Keep the completed bake</small></div></div>
-      <h3>Real Time Geometry</h3><p>Enable it for interactive geometry updates. Turn it off when you prefer a deferred workflow. A missing editor preview while geometry is deferred does not, by itself, mean the actor is broken.</p>
-      <h3>Reuse and changes</h3><p>Moving or rotating a valid baked actor, toggling Real Time Geometry, and saving unchanged geometry can reuse its cord mesh. Spline-shape or geometry-setting changes can require a new bake. Older Wired or affected collapsed Classic bakes should use <b>Build Lights</b> and Save after updating the plugin.</p>
+      <h3>Real Time Geometry</h3><p>Enable it for interactive geometry updates. Turn it off when you prefer a deferred workflow. When the preview is deferred, click <b>Build Lights</b> to display the geometry before Play.</p>
+      <h3>Reuse and changes</h3><p>Moving or rotating a valid baked actor, toggling Real Time Geometry, and saving unchanged geometry can reuse its cord mesh. Spline-shape or geometry-setting changes can require a new bake. After changing geometry settings, click <b>Build Lights</b> and save the level.</p>
       <h3>Moving a level to another project</h3><p>Keep generated cord meshes with their levels in your project’s Content folder. Install and enable a compatible Christmas Lights plugin in the destination project, then use Unreal’s migration tools for your project-owned maps and referenced assets. A level migration does not install the plugin’s native code.</p>
       <p>Preview animation pauses during interactive dragging and resumes afterward. Other light strings keep their own timing.</p>
     </section>
@@ -121,7 +121,7 @@
       <p>Adjust pattern speed and the controls exposed for the selected pattern. Chasing / Flash offers Classic Chase, Flashing Chase, Mixed, and Alternating Chase. Combination cycles through its configured patterns.</p>
       <h3>Color presets</h3><p>Choose Multicolor, Blue, Purple, Red, Yellow, Green, or Pink. Multicolor uses the saved Bulb Colors palette. Solid-color presets preserve that palette so you can switch back later.</p>
       <div class="palette" aria-label="Available solid colors"><span style="--swatch:#386bc8">Blue</span><span style="--swatch:#8256a7">Purple</span><span style="--swatch:#ba493d">Red</span><span style="--swatch:#bd922d">Yellow</span><span style="--swatch:#38774e">Green</span><span style="--swatch:#c76191">Pink</span></div>
-      <p>Color and glow adjustments do not require a cord rebake. Changing color keeps the current animation phase. Enable editor pattern preview to animate in the viewport; gameplay starts its own controller timer.</p>
+      <p>Color and glow adjustments do not require a cord rebake. Changing color keeps the current animation phase. Enable editor pattern preview to animate in the viewport; test the animation in Play to see it in gameplay.</p>
     </section>
 
     <section id="appearance" data-section>
@@ -139,7 +139,7 @@
       <p>Use the supplied Blueprint setters to update geometry or controller state. Keep an actor reference for geometry settings and a Light Controller reference for animation.</p>
       <div class="table-wrap"><table><caption>Common Blueprint calls</caption><thead><tr><th scope="col">Target</th><th scope="col">Call</th><th scope="col">Purpose</th></tr></thead><tbody><tr><td>Christmas Lights actor</td><td><code>SetLightTypePreset</code></td><td>Choose LED or C9 and apply family defaults.</td></tr><tr><td>Christmas Lights actor</td><td><code>SetLightSpacingPreset</code></td><td>Select Close, Standard, Wide, or another spacing preset.</td></tr><tr><td>Christmas Lights actor</td><td><code>SetBulbType</code></td><td>Choose Classic or Detailed appearance.</td></tr><tr><td>Light Controller</td><td><code>SetColorPreset</code></td><td>Change the palette without rebuilding the cord.</td></tr><tr><td>Light Controller</td><td><code>SetGlowPreset</code> / <code>SetGlowStrength</code></td><td>Set emission strength.</td></tr><tr><td>Light Controller</td><td><code>SetGlassGlowStrength</code> / <code>SetInnerEmitterIntensity</code></td><td>Adjust Detailed-bulb emission.</td></tr></tbody></table></div>
       <p class="flow-code">Actor reference → Set Light Type Preset → Set Light Spacing Preset → Wide</p>
-      <p>Apply family selection before custom geometry settings because family shortcuts can change them. At runtime the controller uses a repeating timer; Steady On does not need a repeating pattern timer.</p>
+      <p>Apply family selection before custom geometry settings because family shortcuts can change them. Use Steady On for a constant glow or choose an animated pattern for changing light effects.</p>
     </section>
 
     <section id="performance" data-section>
@@ -148,7 +148,7 @@
       <ul class="check-list"><li>Increase spacing to reduce bulb and socket instances.</li><li>Use baked cord geometry for fixed shapes and save completed bakes before packaging.</li><li>Disable editor animation and Real Time Geometry when they are not needed.</li><li>Keep shadows off unless the shot benefits from them.</li><li>Use Detailed bulbs intentionally: their translucent pass and inner geometry remain at distance.</li></ul>
       <h3>Optimization presets</h3><p>Maximum favors a deferred editor workflow, Classic bulbs, no shadows or editor animation, and 20 Hz pattern updates. Minimum favors live geometry, Detailed bulbs, shadows, and approximately 60 Hz updates. Presets also reset spacing to Automatic; choose your desired spacing afterward. Manual settings can make the preset display Custom.</p>
       <h3>Ray tracing</h3><p>Ray-tracing presets control participation in ray tracing; they do not switch visible lights off. Hardware RT requires compatible hardware and project rendering settings, including the required skin-cache support. Check these settings in the project where you use the plugin.</p>
-      <p class="muted">No universal frame-rate, instance-count, or memory guarantee is claimed. Production performance and final visual review depend on your project.</p>
+      <p class="muted">Check performance in your scene on your target hardware. Adjust bulb spacing, appearance, and shadows to suit your frame-rate budget.</p>
     </section>
 
     <section id="troubleshooting" data-section>
@@ -157,21 +157,21 @@
       <details open><summary>The plugin is enabled, but its content is missing.</summary><p>Restart the editor after enabling it. Turn on Show Plugin Content and, if needed, Show Engine Content in Content Browser Settings. Expand the Sources panel, select the ChristmasLights plugin folder, clear search/type filters, and search for BP_ChristmasLights. Its supplied assets are outside your project’s normal Content folder.</p></details>
       <details open><summary>I purchased through the Fab window inside Unreal.</summary><p>The purchase is associated with your Epic account. Save and close the editor, then install the plugin through the Launcher’s Fab Library using Install to Engine. Reopen your project and enable Christmas Lights.</p></details>
       <details open><summary>Unreal reports missing or incompatible plugin modules.</summary><p>Check that your project is opening with the engine version you installed the plugin for. Install the matching supported build through the Launcher. Do not rename or copy binaries from another engine version to bypass the message. If it persists, include the exact engine version and error text when contacting the support channel listed on Fab.</p></details>
-      <details open><summary>Do I need to compile C++ to place the lights?</summary><p>The intended Fab workflow uses the supplied precompiled plugin for its supported Launcher engine version and platform, including Blueprint-only projects. Custom engine builds or unsupported versions may require a separate source build. Follow the final listing’s compatibility requirements.</p></details>
+      <details open><summary>Do I need to compile C++ to place the lights?</summary><p>For a supported Launcher engine version and platform, use the matching precompiled plugin with your Blueprint-only or C++ project. Custom engine builds may require compiling the plugin from source. Check the Fab listing for compatibility requirements.</p></details>
       <details open><summary>The bulbs are too close together.</summary><p>On the actor, choose <b>Optimization → Light Spacing Preset → Wide (50 cm)</b> or Extra Wide (100 cm). Automatic follows the denser native spacing. Rebuild the geometry if it is deferred.</p></details>
       <details open><summary>I placed the Blueprint, but I cannot see the lights.</summary><p>Click <b>Build Lights</b> for a manual preview, or enable <b>Real Time Geometry</b>. Check the spline has a usable shape and the bulb/source assets are present. The optimized default can defer geometry until Play.</p></details>
       <details open><summary>The lights are visible but do not animate in the editor.</summary><p>Select the Light Controller component and enable its editor pattern preview. Select an animated pattern instead of Steady On. Preview can pause while dragging a spline.</p></details>
       <details open><summary>Spacing changed when I selected a family or preset.</summary><p>C9 selection applies Wide along with its size and cord defaults. Optimization presets reset spacing to Automatic. Set family, appearance, and optimization first; apply custom spacing afterward.</p></details>
       <details open><summary>The glow looks different in another level.</summary><p>Check exposure, bloom, Glow Strength, bulb appearance, and project rendering settings. Emission intensity alone does not guarantee the same on-screen halo in every scene.</p></details>
       <details open><summary>A migrated level is missing its baked cords.</summary><p>Include the level’s generated BakedCords assets and their dependencies. Build Lights and save after intentional geometry changes. Preserve the original light assets and compatible native classes.</p></details>
-      <details open><summary>There are yellow baking messages in the Output Log.</summary><p>The current system intentionally logs some bake and lifecycle events as warnings. Inspect the message and stage: a yellow progress message alone is not a failed bake. Error-level failures require investigation.</p></details>
+      <details open><summary>There are yellow baking messages in the Output Log.</summary><p>Some baking progress messages appear in yellow. Read the message to identify what happened. If a bake fails, check the Output Log for errors and include the relevant messages when contacting support.</p></details>
     </section>
 
     <section id="compatibility" data-section>
-      <div class="section-kicker">11 / ABOUT THIS GUIDE</div><h2>Compatibility and scope</h2>
-      <p>The current development validation target is <b>Unreal Engine 5.8.3 on Windows / Win64</b>. Before purchasing or installing, check the Fab listing for the released plugin’s supported engine versions and platforms. Support for other combinations has not been established.</p>
-      <p>These buyer instructions are being prepared for the Fab plugin release. A purchase link will be added when the listing is published. This website provides documentation; installation and updates for the released product will be provided through Fab and the Epic Games Launcher.</p>
-      <p>Meshes and materials were created by David Salamanca. Documentation reflects the current development behavior, including Automatic spacing for fresh actors. Verified behavior can differ from older saved actor overrides.</p>
+      <div class="section-kicker">11 / ABOUT THIS GUIDE</div><h2>Compatibility and help</h2>
+      <p>Check the Christmas Lights listing on Fab for supported Unreal Engine versions and platforms. Install the plugin build that matches the engine version used by your project.</p>
+      <p>For installation or product support, use the contact information on the Fab listing. Include your Unreal Engine version, plugin version, and any relevant error messages. For corrections to this guide, use the documentation feedback link below.</p>
+      <p>Christmas Lights and its meshes and materials were created by David Salamanca. Existing actors keep their saved settings; use the controls described in this guide to adjust them.</p>
       <a class="text-link" href="https://github.com/criptycal/ChristmasLights-docs/issues">Report a documentation issue <span aria-hidden="true">↗</span></a>
     </section>
     <footer><span>Christmas Lights · David Salamanca</span><span>© 2026 · Documentation updated October 2026</span><a href="#overview">Back to top ↑</a></footer>

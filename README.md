@@ -1,6 +1,6 @@
 # Christmas Lights documentation
 
-Public buyer documentation for David Salamanca's Christmas Lights plugin for Unreal Engine, including the planned Fab purchase and installation workflow.
+Public buyer documentation for David Salamanca's Christmas Lights plugin for Unreal Engine, covering Fab installation, setup, and everyday use.
 
 **Website:** https://criptycal.github.io/ChristmasLights-docs/
 
@@ -12,7 +12,7 @@ Edit `index.html`, `styles.css`, and `app.js` directly. There is no framework, p
 
 GitHub Pages publishes the root of `main`. `.nojekyll` tells Pages to serve the static files directly. Keep all paths relative so the site works under `/ChristmasLights-docs/`.
 
-The published guide must match the software's actual behavior. In particular, the current native spacing default is Automatic; Wide (50 cm) is a selectable preset and is applied by C9 selection. The Fab installation guide describes the intended release workflow. Add the actual purchase link and confirm the final plugin folder layout, supported versions, and packaged defaults when the listing is published; do not imply it is already on sale. Keep the buyer workflow focused on Install to Engine, project activation, plugin content visibility, and placing BP_ChristmasLights.
+Keep the guide focused on customer tasks: installation, plugin activation, finding assets, building light strings, and troubleshooting. Describe settings accurately and use the Fab listing as the reference for supported versions and platforms. Keep internal development notes and release planning out of the public guide.
 
 Documentation feedback can be filed through this repository's Issues tab. Do not include credentials or private project files in public issues.
 
