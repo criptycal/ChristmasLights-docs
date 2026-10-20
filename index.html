@@ -13,7 +13,7 @@
       if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
     } catch (_) { /* System colors remain available when storage is blocked. */ }
   </script>
-  <link rel="stylesheet" href="styles.css?v=d72c87ebaa46">
+  <link rel="stylesheet" href="styles.css?v=30fd0d16e1e7">
   <script src="app.js?v=ff472d27ed39" defer></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
   <a class="brand" href="#overview"><img src="favicon.svg" width="34" height="34" alt=""><span>Christmas Lights<span class="brand-sub">by David Salamanca</span></span></a>
   <span class="top-label">DOCUMENTATION</span>
   <a class="top-link" href="https://github.com/criptycal/ChristmasLights-docs/issues">Documentation feedback <span aria-hidden="true">↗</span></a>
-  <button class="theme-toggle" type="button" hidden aria-label="Switch color theme"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Theme</span></button>
+  <button class="theme-toggle" type="button" hidden aria-label="Switch color theme"><svg class="theme-icon theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme-icon theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 13.1A9 9 0 0 1 10.9 3.2a9 9 0 1 0 9.9 9.9Z"/></svg><span class="theme-label">Theme</span></button>
   <button class="menu-button" type="button" aria-expanded="false" aria-controls="sidebar">Menu</button>
 </header>
 <div class="layout">
@@ -173,7 +173,6 @@
       <p>Adjust pattern speed and the controls exposed for the selected pattern. Chasing / Flash offers Classic Chase, Flashing Chase, Mixed, and Alternating Chase. Combination cycles through its configured patterns.</p>
       <h3 id="festival-mix">Festival Mix</h3>
       <p>A colorful, fast-moving show that repeats every <b>75 seconds</b>. Select <b>Light Controller → Patterns → Current Pattern → Festival Mix</b>, then enable editor preview or play your level.</p>
-      <div class="note"><strong>Availability</strong>Festival Mix is available in the latest source version. The separately delivered plugin <b>1.0.1 does not include it</b>.</div>
       <div class="table-wrap"><table>
         <caption>Festival Mix · five complete effects, 15 seconds each</caption>
         <thead><tr><th scope="col">Time</th><th scope="col">Pattern</th></tr></thead>
