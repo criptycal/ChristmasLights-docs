@@ -40,3 +40,27 @@ if ('IntersectionObserver' in window) {
   }, {rootMargin: '-100px 0px -60% 0px', threshold: 0});
   sections.forEach(section => observer.observe(section));
 }
+
+// Load the animation when it is in view, and honor reduced-motion preferences.
+const demoImage = document.querySelector('#rotation-demo');
+const demoToggle = document.querySelector('.demo-toggle');
+if (demoImage && demoToggle) {
+  const poster = demoImage.getAttribute('src');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let playing = false;
+  let userChoice = false;
+  function setDemoPlaying(next) {
+    playing = next;
+    demoImage.src = next ? demoImage.dataset.animation : poster;
+    demoToggle.textContent = next ? 'Pause animation' : 'Play animation';
+  }
+  demoToggle.hidden = false;
+  demoToggle.addEventListener('click', () => { userChoice = true; setDemoPlaying(!playing); });
+  reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) setDemoPlaying(false); });
+  if ('IntersectionObserver' in window) {
+    const demoObserver = new IntersectionObserver(entries => {
+      if (!userChoice) setDemoPlaying(entries[0].isIntersecting && !reducedMotion.matches);
+    }, {threshold: 0.2});
+    demoObserver.observe(demoImage);
+  }
+}

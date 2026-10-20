@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Christmas Lights for Unreal Engine by David Salamanca. Fab plugin installation, LED and C9 bulbs, spline editing, spacing, animation, and reusable cord baking.">
-  <meta name="theme-color" content="#172c27">
+  <meta name="theme-color" content="#4a1120">
   <title>Christmas Lights — Documentation</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -49,7 +49,7 @@
       <h1>A little light.<br>A lot of control.</h1>
       <p class="hero-copy">Build Christmas light strings along a spline. Choose LED or C9 bulbs, shape the cord, and bring it to life with colors and animated patterns.</p>
       <div class="hero-actions"><a class="button primary" href="#installation">Install from Fab <span aria-hidden="true">→</span></a><a class="button secondary" href="#spacing">Adjust light spacing</a></div>
-      <div class="string-art" aria-hidden="true"><svg viewBox="0 0 720 175" fill="none"><path d="M-15 11C170 123 530 123 735 11" stroke="#617c6b" stroke-width="4"/><g stroke="#617c6b" stroke-width="4"><path d="M80 54V72M220 86V104M360 96V114M500 86V104M640 54V72"/></g><g><path d="M70 72h20v9H70z" fill="#617c6b"/><ellipse cx="80" cy="95" rx="13" ry="18" fill="#bf5849"/><path d="M210 104h20v8h-20z" fill="#617c6b"/><ellipse cx="220" cy="127" rx="13" ry="18" fill="#c4923d"/><path d="M350 114h20v8h-20z" fill="#617c6b"/><ellipse cx="360" cy="137" rx="13" ry="18" fill="#467c67"/><path d="M490 104h20v8h-20z" fill="#617c6b"/><ellipse cx="500" cy="127" rx="13" ry="18" fill="#c4923d"/><path d="M630 72h20v9h-20z" fill="#617c6b"/><ellipse cx="640" cy="95" rx="13" ry="18" fill="#bf5849"/></g></svg></div>
+      <div class="string-art" aria-hidden="true"><svg viewBox="0 0 720 175" fill="none"><path d="M-15 11C170 123 530 123 735 11" stroke="#a67879" stroke-width="4"/><g stroke="#a67879" stroke-width="4"><path d="M80 54V72M220 86V104M360 96V114M500 86V104M640 54V72"/></g><g><path d="M70 72h20v9H70z" fill="#a67879"/><ellipse cx="80" cy="95" rx="13" ry="18" fill="#b52c40"/><path d="M210 104h20v8h-20z" fill="#a67879"/><ellipse cx="220" cy="127" rx="13" ry="18" fill="#c4923d"/><path d="M350 114h20v8h-20z" fill="#a67879"/><ellipse cx="360" cy="137" rx="13" ry="18" fill="#8e2038"/><path d="M490 104h20v8h-20z" fill="#a67879"/><ellipse cx="500" cy="127" rx="13" ry="18" fill="#c4923d"/><path d="M630 72h20v9h-20z" fill="#a67879"/><ellipse cx="640" cy="95" rx="13" ry="18" fill="#b52c40"/></g></svg></div>
       <div class="feature-row"><div><strong>2 bulb families</strong><span>Classic LED &amp; faceted C9</span></div><div><strong>8 lighting patterns</strong><span>Steady, waves, chase &amp; more</span></div><div><strong>Reusable cord bakes</strong><span>Edit, build, save, repeat</span></div></div>
       <div class="note"><strong>Wide by default.</strong> New LED and C9 actors start with <b>Wide (50 cm)</b> spacing. To adjust it, select the actor and open <b>Optimization → Light Spacing Preset</b>.</div>
     </section>
@@ -116,6 +116,12 @@
         <li>Press <b>R</b> to reset that light to its normal orientation. Use Unreal's <b>Undo</b> and <b>Redo</b> to reverse or restore a drag.</li>
         <li>Press <b>Esc</b> or click <b>Finish Editing Lights</b> when finished. Click <b>Build Lights</b> if needed, then save the level to keep the adjustment and completed bake.</li>
       </ol>
+      <figure class="demo" aria-labelledby="rotation-demo-caption">
+        <div class="demo-header"><span class="demo-label">INDIVIDUAL LIGHT ROTATION</span><button class="demo-toggle" type="button" aria-controls="rotation-demo" hidden>Play animation</button></div>
+        <img id="rotation-demo" src="assets/individual-lights-rotation-poster.png" data-animation="assets/individual-lights-rotation.gif" width="800" height="380" loading="lazy" decoding="async" alt="Unreal Editor demonstration: the rotation ring turns selected bulbs individually along a light string around a window.">
+        <figcaption id="rotation-demo-caption">Select a light and turn it around the cord while the neighboring lights stay in place. <a href="assets/individual-lights-rotation.gif" download>Download GIF (3.2 MB)</a></figcaption>
+        <noscript><a class="demo-note" href="assets/individual-lights-rotation.gif">Watch the rotation animation</a></noscript>
+      </figure>
       <p>The mode supports both bulb families with Classic cords and the supplied Wired meshes. Custom Wired meshes that replace entire cord sections do not support individual rotation. Stop Play or Simulate before editing.</p>
       <p>Adjustments stay with the same light number on each spline. Review them after changing spacing or path length. Shortening a path retains adjustments for removed light numbers; they return if the path grows again. Duplicating a spline or light-string actor copies its adjustments.</p>
       <p class="muted"><b>Version check:</b> Plugin version 1.0.1 does not include Edit Individual Lights. Check that your installed build includes the control before following these steps.</p>

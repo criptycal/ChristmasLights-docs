@@ -17,3 +17,6 @@ Keep the guide focused on customer tasks: installation, plugin activation, findi
 Documentation feedback can be filed through this repository's Issues tab. Do not include credentials or private project files in public issues.
 
 Copyright 2026 David Salamanca. All rights reserved.
+
+
+The guide uses a warm red palette. Files in `assets/` include the author-provided individual-light rotation recording converted to an 800 x 380, 12 fps, seven-second GIF and its static preview. The animation loads when visible, has a play/pause control, and stays still by default for readers who prefer reduced motion. Keep demonstration media optimized and include descriptive alternative text. Preserve the actual bulb-color swatches when changing the website theme.
