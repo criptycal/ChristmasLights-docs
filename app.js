@@ -42,9 +42,10 @@ if ('IntersectionObserver' in window) {
 }
 
 // Load the animation when it is in view, and honor reduced-motion preferences.
-const demoImage = document.querySelector('#rotation-demo');
-const demoToggle = document.querySelector('.demo-toggle');
-if (demoImage && demoToggle) {
+for (const demo of document.querySelectorAll('.demo')) {
+  const demoImage = demo.querySelector('img[data-animation]');
+  const demoToggle = demo.querySelector('.demo-toggle');
+  if (!demoImage || !demoToggle) continue;
   const poster = demoImage.getAttribute('src');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let playing = false;
