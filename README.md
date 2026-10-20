@@ -23,3 +23,12 @@ The guide uses a warm red palette. Files in `assets/` include the author-provide
 
 
 `index.html` versions the stylesheet and script URLs with the first 12 characters of their SHA-256 hashes (UTF-8, LF line endings). Update those query strings whenever either file changes, so returning visitors do not mix new markup with cached code or styles. Demonstrations use real GIFs as their HTML fallback; `<picture>` supplies a still preview for reduced-motion readers even without JavaScript. The script adds in-view playback and pause controls.
+
+
+## Festival Mix and color themes
+
+The Patterns and colors section documents the source-version Festival Mix show, its five 15-second stages, automatic seven-color rotation and plugin 1.0.1 availability limit.
+
+The header theme button switches between light and dark red palettes. System preference is used until a reader chooses; the choice is saved in local storage when available. Blocked storage still permits session switching. Without JavaScript, the guide follows system colors and hides the unavailable toggle. Printing uses the light palette. Bulb color swatches and demonstration media are unchanged.
+
+When editing styles.css or app.js, refresh its index.html query string with the first 12 SHA-256 characters of the UTF-8 LF file bytes to avoid stale cached assets.

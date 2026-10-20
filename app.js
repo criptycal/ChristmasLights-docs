@@ -1,4 +1,30 @@
 'use strict';
+
+const themeButton = document.querySelector('.theme-toggle');
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+let chosenTheme = document.documentElement.dataset.theme || null;
+function renderTheme() {
+  const theme = chosenTheme || (systemTheme.matches ? 'dark' : 'light');
+  document.documentElement.dataset.theme = theme;
+  const next = theme === 'dark' ? 'light' : 'dark';
+  themeButton.setAttribute('aria-label', `Switch to ${next} theme`);
+  themeButton.title = `Switch to ${next} theme`;
+  themeButton.querySelector('.theme-label').textContent = `${next === 'light' ? 'Light' : 'Dark'} theme`;
+}
+themeButton.addEventListener('click', () => {
+  chosenTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  try { localStorage.setItem('christmas-lights-theme', chosenTheme); } catch (_) { /* Keep this session's choice. */ }
+  renderTheme();
+});
+systemTheme.addEventListener('change', () => { if (!chosenTheme) renderTheme(); });
+window.addEventListener('storage', event => {
+  if (event.key !== 'christmas-lights-theme' && event.key !== null) return;
+  chosenTheme = event.newValue === 'light' || event.newValue === 'dark' ? event.newValue : null;
+  renderTheme();
+});
+renderTheme();
+themeButton.hidden = false;
+
 const search = document.querySelector('#search');
 const sections = [...document.querySelectorAll('[data-section]')];
 const links = [...document.querySelectorAll('nav a')];

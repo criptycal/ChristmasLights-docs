@@ -7,8 +7,14 @@
   <meta name="theme-color" content="#4a1120">
   <title>Christmas Lights — Documentation</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=69df8bd268c1">
-  <script src="app.js?v=db69ca55b3bc" defer></script>
+  <script>
+    try {
+      const theme = localStorage.getItem('christmas-lights-theme');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch (_) { /* System colors remain available when storage is blocked. */ }
+  </script>
+  <link rel="stylesheet" href="styles.css?v=d72c87ebaa46">
+  <script src="app.js?v=ff472d27ed39" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to documentation</a>
@@ -16,6 +22,7 @@
   <a class="brand" href="#overview"><img src="favicon.svg" width="34" height="34" alt=""><span>Christmas Lights<span class="brand-sub">by David Salamanca</span></span></a>
   <span class="top-label">DOCUMENTATION</span>
   <a class="top-link" href="https://github.com/criptycal/ChristmasLights-docs/issues">Documentation feedback <span aria-hidden="true">↗</span></a>
+  <button class="theme-toggle" type="button" hidden aria-label="Switch color theme"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Theme</span></button>
   <button class="menu-button" type="button" aria-expanded="false" aria-controls="sidebar">Menu</button>
 </header>
 <div class="layout">
@@ -50,7 +57,7 @@
       <p class="hero-copy">Build Christmas light strings along a spline. Choose LED or C9 bulbs, shape the cord, and bring it to life with colors and animated patterns.</p>
       <div class="hero-actions"><a class="button primary" href="#installation">Install from Fab <span aria-hidden="true">→</span></a><a class="button secondary" href="#spacing">Adjust light spacing</a></div>
       <div class="string-art" aria-hidden="true"><svg viewBox="0 0 720 175" fill="none"><path d="M-15 11C170 123 530 123 735 11" stroke="#a67879" stroke-width="4"/><g stroke="#a67879" stroke-width="4"><path d="M80 54V72M220 86V104M360 96V114M500 86V104M640 54V72"/></g><g><path d="M70 72h20v9H70z" fill="#a67879"/><ellipse cx="80" cy="95" rx="13" ry="18" fill="#b52c40"/><path d="M210 104h20v8h-20z" fill="#a67879"/><ellipse cx="220" cy="127" rx="13" ry="18" fill="#c4923d"/><path d="M350 114h20v8h-20z" fill="#a67879"/><ellipse cx="360" cy="137" rx="13" ry="18" fill="#8e2038"/><path d="M490 104h20v8h-20z" fill="#a67879"/><ellipse cx="500" cy="127" rx="13" ry="18" fill="#c4923d"/><path d="M630 72h20v9h-20z" fill="#a67879"/><ellipse cx="640" cy="95" rx="13" ry="18" fill="#b52c40"/></g></svg></div>
-      <div class="feature-row"><div><strong>2 bulb families</strong><span>Classic LED &amp; faceted C9</span></div><div><strong>8 lighting patterns</strong><span>Steady, waves, chase &amp; more</span></div><div><strong>Reusable cord bakes</strong><span>Edit, build, save, repeat</span></div></div>
+      <div class="feature-row"><div><strong>2 bulb families</strong><span>Classic LED &amp; faceted C9</span></div><div><strong>Animated light shows</strong><span>Steady, waves, chase &amp; more</span></div><div><strong>Reusable cord bakes</strong><span>Edit, build, save, repeat</span></div></div>
       <div class="note"><strong>Wide by default.</strong> New LED and C9 actors start with <b>Wide (50 cm)</b> spacing. To adjust it, select the actor and open <b>Optimization → Light Spacing Preset</b>.</div>
     </section>
 
@@ -164,6 +171,21 @@
       <p>Select the <b>Light Controller</b> component. Geometry controls stay on the actor; animation controls are on the controller.</p>
       <ul class="pattern-grid"><li>Combination</li><li>In Waves</li><li>Sequential</li><li>Slow Glow</li><li>Chasing / Flash</li><li>Slow Fade</li><li>Twinkle / Flash</li><li>Steady On</li></ul>
       <p>Adjust pattern speed and the controls exposed for the selected pattern. Chasing / Flash offers Classic Chase, Flashing Chase, Mixed, and Alternating Chase. Combination cycles through its configured patterns.</p>
+      <h3 id="festival-mix">Festival Mix</h3>
+      <p>A colorful, fast-moving show that repeats every <b>75 seconds</b>. Select <b>Light Controller → Patterns → Current Pattern → Festival Mix</b>, then enable editor preview or play your level.</p>
+      <div class="note"><strong>Availability</strong>Festival Mix is available in the latest source version. The separately delivered plugin <b>1.0.1 does not include it</b>.</div>
+      <div class="table-wrap"><table>
+        <caption>Festival Mix · five complete effects, 15 seconds each</caption>
+        <thead><tr><th scope="col">Time</th><th scope="col">Pattern</th></tr></thead>
+        <tbody><tr><th scope="row">0–15 seconds</th><td>In Waves</td></tr>
+        <tr><th scope="row">15–30 seconds</th><td>Slow Glow</td></tr>
+        <tr><th scope="row">30–45 seconds</th><td>Slow Fade</td></tr>
+        <tr><th scope="row">45–60 seconds</th><td>Twinkle / Flash</td></tr>
+        <tr><th scope="row">60–75 seconds</th><td>Steady On</td></tr></tbody>
+      </table></div>
+      <p>Every 15-second pattern cycles through <b>Blue → Purple → Red → Yellow → Green → Pink → Multicolor</b>, spending about 2.14 seconds on each. Multicolor uses your saved palette. Each effect completes its cycles before the next begins; Sequential and Chasing / Flash are excluded.</p>
+      <p><b>Pattern Speed</b> and <b>Color Preset</b> are disabled while Festival Mix is selected because the show controls both. Your previous choices are retained and return when you choose another pattern. Glow controls remain available.</p>
+
       <h3>Color presets</h3><p>Choose Multicolor, Blue, Purple, Red, Yellow, Green, or Pink. Multicolor uses the saved Bulb Colors palette. Solid-color presets preserve that palette so you can switch back later.</p>
       <div class="palette" aria-label="Available solid colors"><span style="--swatch:#386bc8">Blue</span><span style="--swatch:#8256a7">Purple</span><span style="--swatch:#ba493d">Red</span><span style="--swatch:#bd922d">Yellow</span><span style="--swatch:#38774e">Green</span><span style="--swatch:#c76191">Pink</span></div>
       <p>Color and glow adjustments do not require a cord rebake. Changing color keeps the current animation phase. Enable editor pattern preview to animate in the viewport; test the animation in Play to see it in gameplay.</p>
