@@ -102,6 +102,15 @@
       <div class="table-wrap"><table><caption>Automatic and manual spacing</caption><thead><tr><th scope="col">Setting</th><th scope="col">Behavior</th></tr></thead><tbody><tr><th scope="row">Automatic</th><td>Classic uses 15 cm. Wired uses the source cord’s native length (numeric value 0). This can place bulbs much closer together than Wide.</td></tr><tr><th scope="row">Custom</th><td>Keeps your numeric values. Editing a spacing number selects Custom. Normal construction and loading preserve those adjustments.</td></tr><tr><th scope="row">Wired fitting</th><td>Sections fit evenly along the spline, so actual distances can differ slightly from the requested spacing. The first bulb is approximately half a section from the start.</td></tr></tbody></table></div>
       <div class="note"><strong>Default spacing: Wide (50 cm)</strong> New LED and C9 actors use Wide for both cord styles. Selecting either family also applies Wide. Choose another preset or enter a custom spacing whenever you need it.</div>
       <p>After changing spacing, let Real Time Geometry rebuild the preview or click <b>Build Lights</b>. Larger bulbs and tight curves may need more space to avoid overlap.</p>
+      <figure class="demo" aria-labelledby="spacing-demo-caption">
+        <div class="demo-header"><span class="demo-label">LIGHT SPACING</span><button class="demo-toggle" type="button" aria-controls="spacing-demo" hidden>Play animation</button></div>
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/light-spacing-poster.png">
+          <img id="spacing-demo" src="assets/light-spacing.gif" data-poster="assets/light-spacing-poster.png" data-animation="assets/light-spacing.gif" width="800" height="382" loading="lazy" decoding="async" alt="Unreal Editor demonstration: selecting light-spacing presets and entering custom spacing changes the gaps between bulbs along a light string.">
+        </picture>
+        <figcaption id="spacing-demo-caption">Choose a spacing preset or enter a custom value to adjust the gaps between bulbs. <a href="assets/light-spacing.gif" download>Download GIF (4.8 MB)</a></figcaption>
+        <noscript><a class="demo-note" href="assets/light-spacing.gif">Watch the light-spacing animation</a></noscript>
+      </figure>
     </section>
 
     <section id="geometry" data-section>
