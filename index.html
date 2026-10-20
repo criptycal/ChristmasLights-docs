@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#4a1120">
   <title>Christmas Lights — Documentation</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=69df8bd268c1">
+  <script src="app.js?v=db69ca55b3bc" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to documentation</a>
@@ -118,7 +118,10 @@
       </ol>
       <figure class="demo" aria-labelledby="rotation-demo-caption">
         <div class="demo-header"><span class="demo-label">INDIVIDUAL LIGHT ROTATION</span><button class="demo-toggle" type="button" aria-controls="rotation-demo" hidden>Play animation</button></div>
-        <img id="rotation-demo" src="assets/individual-lights-rotation-poster.png" data-animation="assets/individual-lights-rotation.gif" width="800" height="380" loading="lazy" decoding="async" alt="Unreal Editor demonstration: the rotation ring turns selected bulbs individually along a light string around a window.">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/individual-lights-rotation-poster.png">
+          <img id="rotation-demo" src="assets/individual-lights-rotation.gif" data-poster="assets/individual-lights-rotation-poster.png" data-animation="assets/individual-lights-rotation.gif" width="800" height="380" loading="lazy" decoding="async" alt="Unreal Editor demonstration: the rotation ring turns selected bulbs individually along a light string around a window.">
+        </picture>
         <figcaption id="rotation-demo-caption">Select a light and turn it around the cord while the neighboring lights stay in place. <a href="assets/individual-lights-rotation.gif" download>Download GIF (3.2 MB)</a></figcaption>
         <noscript><a class="demo-note" href="assets/individual-lights-rotation.gif">Watch the rotation animation</a></noscript>
       </figure>
@@ -134,7 +137,10 @@
       </aside>
       <figure class="demo" aria-labelledby="realtime-demo-caption">
         <div class="demo-header"><span class="demo-label">REAL TIME GEOMETRY</span><button class="demo-toggle" type="button" aria-controls="realtime-demo" hidden>Play animation</button></div>
-        <img id="realtime-demo" src="assets/real-time-geometry-poster.png" data-animation="assets/real-time-geometry.gif" width="800" height="568" loading="lazy" decoding="async" alt="Unreal Editor demonstration: Real Time Geometry is enabled, then moving spline points reshapes the cord and updates its lights.">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/real-time-geometry-poster.png">
+          <img id="realtime-demo" src="assets/real-time-geometry.gif" data-poster="assets/real-time-geometry-poster.png" data-animation="assets/real-time-geometry.gif" width="800" height="568" loading="lazy" decoding="async" alt="Unreal Editor demonstration: Real Time Geometry is enabled, then moving spline points reshapes the cord and updates its lights.">
+        </picture>
         <figcaption id="realtime-demo-caption">Enable Real Time Geometry for live spline updates; switch it off when you no longer need the live preview. <a href="assets/real-time-geometry.gif" download>Download GIF (3.4 MB)</a></figcaption>
         <noscript><a class="demo-note" href="assets/real-time-geometry.gif">Watch the Real Time Geometry animation</a></noscript>
       </figure>

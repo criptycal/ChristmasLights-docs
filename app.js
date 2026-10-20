@@ -46,15 +46,19 @@ for (const demo of document.querySelectorAll('.demo')) {
   const demoImage = demo.querySelector('img[data-animation]');
   const demoToggle = demo.querySelector('.demo-toggle');
   if (!demoImage || !demoToggle) continue;
-  const poster = demoImage.getAttribute('src');
+  const poster = demoImage.dataset.poster;
+  const motionSource = demo.querySelector('source[media]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let playing = false;
   let userChoice = false;
   function setDemoPlaying(next) {
     playing = next;
-    demoImage.src = next ? demoImage.dataset.animation : poster;
+    const source = next ? demoImage.dataset.animation : poster;
+    if (motionSource) motionSource.srcset = source;
+    demoImage.src = source;
     demoToggle.textContent = next ? 'Pause animation' : 'Play animation';
   }
+  setDemoPlaying(!reducedMotion.matches && !('IntersectionObserver' in window));
   demoToggle.hidden = false;
   demoToggle.addEventListener('click', () => { userChoice = true; setDemoPlaying(!playing); });
   reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) setDemoPlaying(false); });
