@@ -32,3 +32,21 @@ The Patterns and colors section documents the source-version Festival Mix show, 
 The header sun/moon button switches between light and dark red palettes. System preference is used until a reader chooses; the choice is saved in local storage when available. Blocked storage still permits session switching. Without JavaScript, the guide follows system colors and hides the unavailable toggle. Printing uses the light palette. Bulb color swatches and demonstration media are unchanged.
 
 When editing styles.css or app.js, refresh its index.html query string with the first 12 SHA-256 characters of the UTF-8 LF file bytes to avoid stale cached assets.
+
+
+## Pattern demonstrations
+
+The Patterns and colors section has eight native details/summary categories for
+the supplied In Waves, Sequential, Slow Glow, Chasing / Flash, Slow Fade,
+Twinkle / Flash, Steady On and Festival Mix recordings. One category opens at a
+time. The GIF loads only when its open demo becomes visible; closing it, leaving
+the viewport or hiding the browser tab restores the poster. Pause stays paused
+while scrolling. Reduced motion uses posters unless the reader explicitly plays.
+Native disclosure controls support keyboard use; without JavaScript, each open
+category contains a GIF with a reduced-motion poster fallback.
+
+The eight GIFs in assets/patterns preserve the supplied recordings at their
+original speed and full duration (11.2-57.3 seconds), scaled to 640 px wide at
+12 fps. Festival Mix is a recorded excerpt of its 75-second show. The originals
+are not stored in this public repository. Keep duration/download-size captions,
+posters and CSS/JS cache hashes current when changing demonstrations.

@@ -68,7 +68,7 @@ if ('IntersectionObserver' in window) {
 }
 
 // Load the animation when it is in view, and honor reduced-motion preferences.
-for (const demo of document.querySelectorAll('.demo')) {
+for (const demo of document.querySelectorAll('.demo:not(.pattern-demo)')) {
   const demoImage = demo.querySelector('img[data-animation]');
   const demoToggle = demo.querySelector('.demo-toggle');
   if (!demoImage || !demoToggle) continue;
@@ -95,3 +95,56 @@ for (const demo of document.querySelectorAll('.demo')) {
     demoObserver.observe(demoImage);
   }
 }
+
+// Pattern recordings load only after their category is opened.
+const patternItems = [...document.querySelectorAll('.pattern-category')];
+for (const item of patternItems) {
+  const image = item.querySelector('img[data-animation]');
+  const button = item.querySelector('.demo-toggle');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let visible = !('IntersectionObserver' in window);
+  let intent = 'auto';
+  let playing = false;
+  function update() {
+    const next = item.open && visible && !document.hidden &&
+      (intent === 'play' || (intent === 'auto' && !reduced.matches));
+    if (next !== playing) {
+      image.src = next ? image.dataset.animation : image.dataset.poster;
+      playing = next;
+    }
+    button.textContent = playing ? 'Pause animation' : 'Play animation';
+    button.setAttribute('aria-label', `${playing ? 'Pause' : 'Play'} ${item.dataset.pattern} animation`);
+  }
+  button.hidden = false;
+  button.addEventListener('click', () => {
+    intent = playing ? 'pause' : 'play';
+    update();
+  });
+  item.addEventListener('toggle', () => {
+    if (item.open) {
+      for (const other of patternItems) if (other !== item) other.open = false;
+    } else {
+      intent = 'auto';
+    }
+    update();
+  });
+  reduced.addEventListener('change', () => { intent = 'auto'; update(); });
+  document.addEventListener('visibilitychange', update);
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting;
+      update();
+    }, { threshold: 0.15 });
+    observer.observe(image);
+  }
+  update();
+}
+function openLinkedPattern() {
+  const item = patternItems.find(candidate => `#${candidate.id}` === location.hash);
+  if (item) {
+    for (const other of patternItems) other.open = other === item;
+    item.scrollIntoView({ block: 'start' });
+  }
+}
+window.addEventListener('hashchange', openLinkedPattern);
+openLinkedPattern();

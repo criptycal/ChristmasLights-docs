@@ -13,8 +13,8 @@
       if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
     } catch (_) { /* System colors remain available when storage is blocked. */ }
   </script>
-  <link rel="stylesheet" href="styles.css?v=30fd0d16e1e7">
-  <script src="app.js?v=ff472d27ed39" defer></script>
+  <link rel="stylesheet" href="styles.css?v=f20515d2f61a">
+  <script src="app.js?v=5e035a8d482d" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to documentation</a>
@@ -169,7 +169,82 @@
     <section id="patterns" data-section>
       <div class="section-kicker">06 / SET THE RHYTHM</div><h2>Patterns and colors</h2>
       <p>Select the <b>Light Controller</b> component. Geometry controls stay on the actor; animation controls are on the controller.</p>
-      <ul class="pattern-grid"><li>Combination</li><li>In Waves</li><li>Sequential</li><li>Slow Glow</li><li>Chasing / Flash</li><li>Slow Fade</li><li>Twinkle / Flash</li><li>Steady On</li></ul>
+      <h3 id="pattern-demos">Watch the patterns</h3>
+      <p>Click a pattern to open its demonstration. Open another to switch, or use the play/pause button. Combination cycles through its configured patterns.</p>
+      <div class="pattern-gallery" aria-label="Pattern demonstrations">
+        <details class="pattern-category" name="pattern-demos" id="demo-in-waves" data-pattern="In Waves">
+          <summary><span>In Waves</span><span class="pattern-duration">29.7 sec demo</span></summary>
+          <figure class="demo pattern-demo" aria-labelledby="in-waves-caption">
+            <div class="demo-header"><span class="demo-label">IN WAVES</span><button class="demo-toggle" type="button" aria-controls="in-waves-animation" hidden>Play animation</button></div>
+            <img id="in-waves-animation" src="assets/patterns/in-waves-poster.png" data-poster="assets/patterns/in-waves-poster.png" data-animation="assets/patterns/in-waves.gif" width="640" height="466" loading="lazy" decoding="async" alt="In Waves pattern on a curved multicolored Christmas light string in Unreal Editor.">
+            <noscript><style>#in-waves-animation{display:none}</style><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/patterns/in-waves-poster.png"><img src="assets/patterns/in-waves.gif" width="640" height="466" loading="lazy" alt="In Waves pattern demonstration."></picture></noscript>
+            <figcaption id="in-waves-caption">In Waves recorded in Unreal Editor. Playback preserves the recording’s speed. <a href="assets/patterns/in-waves.gif" download>Download GIF (17.5 MB)</a></figcaption>
+          </figure>
+        </details>
+        <details class="pattern-category" name="pattern-demos" id="demo-sequential" data-pattern="Sequential">
+          <summary><span>Sequential</span><span class="pattern-duration">25.3 sec demo</span></summary>
+          <figure class="demo pattern-demo" aria-labelledby="sequential-caption">
+            <div class="demo-header"><span class="demo-label">SEQUENTIAL</span><button class="demo-toggle" type="button" aria-controls="sequential-animation" hidden>Play animation</button></div>
+            <img id="sequential-animation" src="assets/patterns/sequential-poster.png" data-poster="assets/patterns/sequential-poster.png" data-animation="assets/patterns/sequential.gif" width="640" height="466" loading="lazy" decoding="async" alt="Sequential pattern on a curved multicolored Christmas light string in Unreal Editor.">
+            <noscript><style>#sequential-animation{display:none}</style><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/patterns/sequential-poster.png"><img src="assets/patterns/sequential.gif" width="640" height="466" loading="lazy" alt="Sequential pattern demonstration."></picture></noscript>
+            <figcaption id="sequential-caption">Sequential recorded in Unreal Editor. Playback preserves the recording’s speed. <a href="assets/patterns/sequential.gif" download>Download GIF (11.8 MB)</a></figcaption>
+          </figure>
+        </details>
+        <details class="pattern-category" name="pattern-demos" id="demo-slow-glow" data-pattern="Slow Glow">
+          <summary><span>Slow Glow</span><span class="pattern-duration">23.6 sec demo</span></summary>
+          <figure class="demo pattern-demo" aria-labelledby="slow-glow-caption">
+            <div class="demo-header"><span class="demo-label">SLOW GLOW</span><button class="demo-toggle" type="button" aria-controls="slow-glow-animation" hidden>Play animation</button></div>
+            <img id="slow-glow-animation" src="assets/patterns/slow-glow-poster.png" data-poster="assets/patterns/slow-glow-poster.png" data-animation="assets/patterns/slow-glow.gif" width="640" height="468" loading="lazy" decoding="async" alt="Slow Glow pattern on a curved multicolored Christmas light string in Unreal Editor.">
+            <noscript><style>#slow-glow-animation{display:none}</style><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/patterns/slow-glow-poster.png"><img src="assets/patterns/slow-glow.gif" width="640" height="468" loading="lazy" alt="Slow Glow pattern demonstration."></picture></noscript>
+            <figcaption id="slow-glow-caption">Slow Glow recorded in Unreal Editor. Playback preserves the recording’s speed. <a href="assets/patterns/slow-glow.gif" download>Download GIF (11.3 MB)</a></figcaption>
+          </figure>
+        </details>
+        <details class="pattern-category" name="pattern-demos" id="demo-chasing-flash" data-pattern="Chasing / Flash">
+          <summary><span>Chasing / Flash</span><span class="pattern-duration">19.7 sec demo</span></summary>
+          <figure class="demo pattern-demo" aria-labelledby="chasing-flash-caption">
+            <div class="demo-header"><span class="demo-label">CHASING / FLASH</span><button class="demo-toggle" type="button" aria-controls="chasing-flash-animation" hidden>Play animation</button></div>
+            <img id="chasing-flash-animation" src="assets/patterns/chasing-flash-poster.png" data-poster="assets/patterns/chasing-flash-poster.png" data-animation="assets/patterns/chasing-flash.gif" width="640" height="470" loading="lazy" decoding="async" alt="Chasing / Flash pattern on a curved multicolored Christmas light string in Unreal Editor.">
+            <noscript><style>#chasing-flash-animation{display:none}</style><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/patterns/chasing-flash-poster.png"><img src="assets/patterns/chasing-flash.gif" width="640" height="470" loading="lazy" alt="Chasing / Flash pattern demonstration."></picture></noscript>
+            <figcaption id="chasing-flash-caption">Chasing / Flash recorded in Unreal Editor. Playback preserves the recording’s speed. <a href="assets/patterns/chasing-flash.gif" download>Download GIF (10.4 MB)</a></figcaption>
+          </figure>
+        </details>
+        <details class="pattern-category" name="pattern-demos" id="demo-slow-fade" data-pattern="Slow Fade">
+          <summary><span>Slow Fade</span><span class="pattern-duration">25.6 sec demo</span></summary>
+          <figure class="demo pattern-demo" aria-labelledby="slow-fade-caption">
+            <div class="demo-header"><span class="demo-label">SLOW FADE</span><button class="demo-toggle" type="button" aria-controls="slow-fade-animation" hidden>Play animation</button></div>
+            <img id="slow-fade-animation" src="assets/patterns/slow-fade-poster.png" data-poster="assets/patterns/slow-fade-poster.png" data-animation="assets/patterns/slow-fade.gif" width="640" height="466" loading="lazy" decoding="async" alt="Slow Fade pattern on a curved multicolored Christmas light string in Unreal Editor.">
+            <noscript><style>#slow-fade-animation{display:none}</style><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/patterns/slow-fade-poster.png"><img src="assets/patterns/slow-fade.gif" width="640" height="466" loading="lazy" alt="Slow Fade pattern demonstration."></picture></noscript>
+            <figcaption id="slow-fade-caption">Slow Fade recorded in Unreal Editor. Playback preserves the recording’s speed. <a href="assets/patterns/slow-fade.gif" download>Download GIF (12.4 MB)</a></figcaption>
+          </figure>
+        </details>
+        <details class="pattern-category" name="pattern-demos" id="demo-twinkle-flash" data-pattern="Twinkle / Flash">
+          <summary><span>Twinkle / Flash</span><span class="pattern-duration">32.4 sec demo</span></summary>
+          <figure class="demo pattern-demo" aria-labelledby="twinkle-flash-caption">
+            <div class="demo-header"><span class="demo-label">TWINKLE / FLASH</span><button class="demo-toggle" type="button" aria-controls="twinkle-flash-animation" hidden>Play animation</button></div>
+            <img id="twinkle-flash-animation" src="assets/patterns/twinkle-flash-poster.png" data-poster="assets/patterns/twinkle-flash-poster.png" data-animation="assets/patterns/twinkle-flash.gif" width="640" height="470" loading="lazy" decoding="async" alt="Twinkle / Flash pattern on a curved multicolored Christmas light string in Unreal Editor.">
+            <noscript><style>#twinkle-flash-animation{display:none}</style><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/patterns/twinkle-flash-poster.png"><img src="assets/patterns/twinkle-flash.gif" width="640" height="470" loading="lazy" alt="Twinkle / Flash pattern demonstration."></picture></noscript>
+            <figcaption id="twinkle-flash-caption">Twinkle / Flash recorded in Unreal Editor. Playback preserves the recording’s speed. <a href="assets/patterns/twinkle-flash.gif" download>Download GIF (21.6 MB)</a></figcaption>
+          </figure>
+        </details>
+        <details class="pattern-category" name="pattern-demos" id="demo-steady-on" data-pattern="Steady On">
+          <summary><span>Steady On</span><span class="pattern-duration">11.2 sec demo</span></summary>
+          <figure class="demo pattern-demo" aria-labelledby="steady-on-caption">
+            <div class="demo-header"><span class="demo-label">STEADY ON</span><button class="demo-toggle" type="button" aria-controls="steady-on-animation" hidden>Play animation</button></div>
+            <img id="steady-on-animation" src="assets/patterns/steady-on-poster.png" data-poster="assets/patterns/steady-on-poster.png" data-animation="assets/patterns/steady-on.gif" width="640" height="468" loading="lazy" decoding="async" alt="Steady On pattern on a curved multicolored Christmas light string in Unreal Editor.">
+            <noscript><style>#steady-on-animation{display:none}</style><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/patterns/steady-on-poster.png"><img src="assets/patterns/steady-on.gif" width="640" height="468" loading="lazy" alt="Steady On pattern demonstration."></picture></noscript>
+            <figcaption id="steady-on-caption">Steady On recorded in Unreal Editor. Playback preserves the recording’s speed. <a href="assets/patterns/steady-on.gif" download>Download GIF (4.7 MB)</a></figcaption>
+          </figure>
+        </details>
+        <details class="pattern-category" name="pattern-demos" id="demo-festival-mix" data-pattern="Festival Mix">
+          <summary><span>Festival Mix</span><span class="pattern-duration">57.3 sec demo</span></summary>
+          <figure class="demo pattern-demo" aria-labelledby="festival-mix-caption">
+            <div class="demo-header"><span class="demo-label">FESTIVAL MIX</span><button class="demo-toggle" type="button" aria-controls="festival-mix-animation" hidden>Play animation</button></div>
+            <img id="festival-mix-animation" src="assets/patterns/festival-mix-poster.png" data-poster="assets/patterns/festival-mix-poster.png" data-animation="assets/patterns/festival-mix.gif" width="640" height="468" loading="lazy" decoding="async" alt="Festival Mix pattern on a curved multicolored Christmas light string in Unreal Editor.">
+            <noscript><style>#festival-mix-animation{display:none}</style><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/patterns/festival-mix-poster.png"><img src="assets/patterns/festival-mix.gif" width="640" height="468" loading="lazy" alt="Festival Mix pattern demonstration."></picture></noscript>
+            <figcaption id="festival-mix-caption">Recorded excerpt of Festival Mix; the complete show loops every 75 seconds. <a href="assets/patterns/festival-mix.gif" download>Download GIF (28.7 MB)</a></figcaption>
+          </figure>
+        </details>
+      </div>
       <p>Adjust pattern speed and the controls exposed for the selected pattern. Chasing / Flash offers Classic Chase, Flashing Chase, Mixed, and Alternating Chase. Combination cycles through its configured patterns.</p>
       <h3 id="festival-mix">Festival Mix</h3>
       <p>A colorful, fast-moving show that repeats every <b>75 seconds</b>. Select <b>Light Controller → Patterns → Current Pattern → Festival Mix</b>, then enable editor preview or play your level.</p>
